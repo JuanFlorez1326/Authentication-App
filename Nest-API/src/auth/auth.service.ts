@@ -57,7 +57,7 @@ export class AuthService {
     }
   }
 
-  findAll(): Promise<User[]> {
+  public findAll(): Promise<User[]> {
     return this.userModel.find();
   }
 
@@ -65,18 +65,6 @@ export class AuthService {
     const user = await this.userModel.findById(id);
     const { password, ...rest } = user.toJSON();
     return rest;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} auth`;
-  }
-
-  update(id: number, updateAuthDto: UpdateAuthDto) {
-    return `This action updates a #${id} auth`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} auth`;
   }
 
   public generateJwt( payload: JwtPayload ) {
