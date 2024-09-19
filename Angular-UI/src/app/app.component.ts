@@ -14,12 +14,12 @@ export class AppComponent {
   private authService = inject(AuthService);
 
   public finishedAuthCheck = computed<boolean>( () => {
-    if (this.authService.authStatus()() === AuthStatus.checking) return false;
+    if (this.authService.authStatus() === AuthStatus.checking) return false;
     return true;
   });
 
   public authStatusChangedEffect = effect( () => {
-    switch(this.authService.authStatus()()) {
+    switch(this.authService.authStatus()) {
       case AuthStatus.checking:
         return; 
       case AuthStatus.authenticated:
