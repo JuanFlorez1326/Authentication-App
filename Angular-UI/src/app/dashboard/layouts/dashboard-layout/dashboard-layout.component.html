@@ -3,4 +3,10 @@
 
 <h3>User</h3>
 <h4></h4>
-<pre>{{ user() | json }}</pre>
+<pre>{{ user()() | json }}</pre>
+
+<br>
+
+<button (click)="onLogout()">
+    Cerrar Sesion
+</button>
