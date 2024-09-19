@@ -3,8 +3,7 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-dashboard-layout',
-  templateUrl: './dashboard-layout.component.html',
-  styleUrls: ['./dashboard-layout.component.css']
+  templateUrl: './dashboard-layout.component.html'
 })
 export class DashboardLayoutComponent {
 
